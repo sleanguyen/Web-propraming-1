@@ -8,7 +8,6 @@ if (isset($_POST['id'])) {
         $stmt->bindValue(':id', $_POST['id']);
         $stmt->execute();
     } catch (PDOException $e) {
-        // Có thể báo lỗi nếu cần
     }
 }
 

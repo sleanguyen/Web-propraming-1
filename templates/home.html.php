@@ -1,5 +1,4 @@
 <style>
-    /* Hero Section (Introduction) */
     .hero-section {
         background-color: white;
         border-radius: 8px;
@@ -14,7 +13,7 @@
     }
 
     .hero-title {
-        color: #1e3a8a; /* Greenwich Blue */
+        color: #1e3a8a; 
         font-size: 2.5em;
         font-weight: bold;
         margin-bottom: 10px;
@@ -33,7 +32,6 @@
         object-fit: cover;
     }
 
-    /* Stats Grid (Rankings) */
     .stats-container {
         display: flex;
         flex-wrap: wrap;
@@ -57,12 +55,12 @@
     .stat-number {
         font-size: 1.5em;
         font-weight: bold;
-        color: #d32f2f; /* Red for emphasis */
+        color: #d32f2f; 
         display: block;
         margin-bottom: 5px;
     }
 
-    /* Event Section */
+
     .section-title {
         text-align: center;
         font-size: 2em;

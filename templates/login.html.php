@@ -46,10 +46,9 @@
 </div>
 
 <style>
-    /* Reset & Base */
     * { box-sizing: border-box; }
     
-    /* Wrapper to center everything on screen */
+
     .login-wrapper {
         min-height: 80vh;
         display: flex;
@@ -60,17 +59,16 @@
         padding: 20px;
     }
 
-    /* The White Card */
+
     .login-card {
         background-color: white;
         width: 100%;
-        max-width: 450px; /* Limits width so it doesn't stretch */
+        max-width: 450px; 
         padding: 40px;
         border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* Soft shadow */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
     }
 
-    /* Header Styling */
     .login-header {
         text-align: center;
         margin-bottom: 30px;
@@ -87,7 +85,6 @@
         font-size: 0.9em;
     }
 
-    /* Input Fields */
     .form-group {
         margin-bottom: 20px;
     }

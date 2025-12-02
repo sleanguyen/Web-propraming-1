@@ -9,7 +9,6 @@ else { $rootPath = '../'; $adminPath = ''; }
     <meta charset="utf-8">
     <title><?= $title ?></title>
     <style>
-        /* CSS nhúng */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, Helvetica, Sans-serif; background-color: #f0f2f5; color: #333; }
         header#admin { background-color: #3cbc8d; padding: 20px; border-bottom: 5px solid #757575; color: white; text-align: center; }

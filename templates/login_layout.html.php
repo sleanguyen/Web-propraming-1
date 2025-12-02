@@ -6,17 +6,15 @@
     <link rel="stylesheet" href="../../question.css">
     
     <style>
-        /* CSS RIÊNG CHO TRANG LOGIN */
         body {
             font-family: Arial, Helvetica, Sans-serif;
-            background-color: #f0f2f5; /* Màu nền xám nhạt */
+            background-color: #f0f2f5; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
         }
 
-        /* Logo hoặc Tên trường ở giữa */
         .login-brand {
             text-align: center;
             padding: 30px 0;
@@ -26,12 +24,11 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        /* Đẩy Footer xuống đáy */
         main {
             flex: 1;
             display: flex;
-            align-items: center;     /* Căn giữa theo chiều dọc */
-            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center;    
+            justify-content: center; 
             flex-direction: column;
         }
 

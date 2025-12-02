@@ -1,17 +1,14 @@
 <?php
-// File: week9/editcomment.php
 session_start();
 include 'includes/DatabaseConnection.php';
 
-// 1. Kiểm tra đăng nhập
+// check log in
 if (!isset($_SESSION['Authorised'])) {
     die("Please login first!");
 }
 
 try {
     if (isset($_POST['text'])) {
-        // --- XỬ LÝ LƯU (UPDATE) ---
-        // Cập nhật comment (Chỉ khi ID khớp VÀ (là chủ sở hữu HOẶC là Admin))
         $sql = "UPDATE comment SET text = :text 
                 WHERE id = :id AND (userid = :uid OR :isAdmin = 'Admin')";
         
@@ -27,14 +24,11 @@ try {
         exit();
 
     } else if (isset($_GET['id'])) {
-        // --- HIỂN THỊ FORM ---
-        // Lấy thông tin comment cũ
         $stmt = $pdo->prepare("SELECT * FROM comment WHERE id = :id");
         $stmt->bindValue(':id', $_GET['id']);
         $stmt->execute();
         $comment = $stmt->fetch();
 
-        // Kiểm tra quyền: Chỉ chủ nhân hoặc Admin mới được vào trang này
         $isOwner = ($comment['userid'] == $_SESSION['UserId']);
         $isAdmin = (isset($_SESSION['UserType']) && $_SESSION['UserType'] == 'Admin');
 

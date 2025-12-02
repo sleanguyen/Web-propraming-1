@@ -85,7 +85,6 @@
                 <div style="background-color: #f9f9f9; padding: 10px; margin-top: 10px; border-radius: 5px;">
                     
                     <?php
-                        // Fetch comments for this post
                         // Since we are inside a template loop, we use the existing $pdo connection
                         $stmt = $pdo->prepare("SELECT comment.*, user.name 
                                                FROM comment 

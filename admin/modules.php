@@ -3,7 +3,6 @@ require 'login/Check.php';
 try {
     include '../includes/DatabaseConnection.php';
 
-    // Lấy danh sách module
     $sql = 'SELECT * FROM module';
     $modules = $pdo->query($sql)->fetchAll();
 
@@ -12,7 +11,6 @@ try {
 ?>
 
 <style>
-    /* CSS Bảng (Dùng lại style của Users cho đồng bộ) */
     .module-table {
         width: 100%; border-collapse: collapse; margin: 25px 0;
         background-color: white; border-radius: 8px; overflow: hidden;
@@ -22,7 +20,6 @@ try {
     .module-table th, .module-table td { padding: 12px 20px; border-bottom: 1px solid #ddd; }
     .module-table tbody tr:hover { background-color: #f1f1f1; }
 
-    /* Nút Add New */
     .btn-add {
         display: inline-block; background-color: #2c3e50; color: white; 
         padding: 10px 20px; text-decoration: none; border-radius: 5px; 
@@ -30,7 +27,6 @@ try {
     }
     .btn-add:hover { background-color: #1a252f; }
 
-    /* Nút Edit/Delete */
     .btn-action {
         text-decoration: none; padding: 5px 10px; border-radius: 4px; color: white; font-size: 0.9em; margin-right: 5px; border: none; cursor: pointer;
     }

@@ -85,7 +85,7 @@
                             <div style="display: flex; gap: 10px; margin-left: 10px;">
                                 
                                 <?php
-                                    // Kiểm tra quyền chủ sở hữu comment
+                                    // owner comment
                                     $isCommentOwner = (isset($_SESSION['UserId']) && $_SESSION['UserId'] == $c['userid']);
                                     $isAdminUser = (isset($_SESSION['UserType']) && $_SESSION['UserType'] == 'Admin');
                                 ?>

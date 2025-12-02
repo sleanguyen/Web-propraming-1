@@ -2,21 +2,21 @@
 session_start();
 include 'includes/DatabaseConnection.php';
 
-// Chỉ cho phép người đã đăng nhập mới được Like
+// only user can like post
 if (isset($_SESSION['Authorised']) && $_SESSION['Authorised'] == 'Y' && isset($_POST['question_id'])) {
     
     $userid = $_SESSION['UserId']; // Lấy ID người đang đăng nhập
     $questionid = $_POST['question_id'];
 
-    // Kiểm tra xem đã like chưa
+    // check like
     $check = $pdo->prepare("SELECT * FROM post_like WHERE userid = :uid AND questionid = :qid");
     $check->execute(['uid' => $userid, 'qid' => $questionid]);
 
     if ($check->rowCount() > 0) {
-        // Nếu đã like rồi -> Xóa (Unlike)
+        // if already like -> unlike
         $stmt = $pdo->prepare("DELETE FROM post_like WHERE userid = :uid AND questionid = :qid");
     } else {
-        // Nếu chưa like -> Thêm mới (Like)
+        
         $stmt = $pdo->prepare("INSERT INTO post_like (userid, questionid) VALUES (:uid, :qid)");
     }
     

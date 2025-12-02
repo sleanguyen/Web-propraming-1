@@ -1,12 +1,11 @@
 <?php
-session_start(); // Đảm bảo session đã bật
+session_start();
 
 try {
     include 'includes/DatabaseConnection.php';
 
-    // --- CẬP NHẬT CÂU LỆNH SQL ---
-    // Thêm đoạn: (SELECT COUNT(*) FROM post_like WHERE questionid = question.id) AS like_count
-   $sql = 'SELECT question.id, question.text, question.date, question.img, question.userid, -- THÊM userid Ở ĐÂY
+    
+   $sql = 'SELECT question.id, question.text, question.date, question.img, question.userid, 
                    user.name, module.module_name AS module,
                    (SELECT COUNT(*) FROM post_like WHERE questionid = question.id) AS like_count
             FROM question 

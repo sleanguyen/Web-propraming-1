@@ -21,9 +21,6 @@ try {
             }
         }
 
-        // --- IMPORTANT CHANGE HERE ---
-        // We do NOT use $_POST['user'] anymore.
-        // We use $_SESSION['UserId'] to get the logged-in user's ID.
         
         $sql = 'INSERT INTO question (text, img, date, userid, module) 
                 VALUES (:text, :img, CURDATE(), :userid, :module)';

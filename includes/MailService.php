@@ -23,8 +23,8 @@ function sendBadgeEmail($studentEmail, $studentName, $badgeName, $reason) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'sleanguyen@gmail.com';   // Admin Email
-        $mail->Password   = 'arwf vpyt otsn lpyv';      // App Password
+        $mail->Username   = 'sleanguyen@gmail.com';   
+        $mail->Password   = 'arwf vpyt otsn lpyv';      
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet    = 'UTF-8';
@@ -67,7 +67,7 @@ function sendBadgeEmail($studentEmail, $studentName, $badgeName, $reason) {
     } catch (Exception $e) {
         return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
-} // <--- THIS BRACKET WAS MISSING BEFORE
+} 
 
 // FUNCTION 2: Send Help Request (Student -> Admin)
 function sendContactEmail($fromEmail, $fromName, $subject, $message) {
@@ -79,8 +79,8 @@ function sendContactEmail($fromEmail, $fromName, $subject, $message) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'sleanguyen@gmail.com';   // Your Admin Email
-        $mail->Password   = 'arwf vpyt otsn lpyv';      // Your App Password
+        $mail->Username   = 'sleanguyen@gmail.com';   
+        $mail->Password   = 'arwf vpyt otsn lpyv';      
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet    = 'UTF-8';

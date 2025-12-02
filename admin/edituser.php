@@ -3,7 +3,6 @@ require 'login/Check.php'; // Admin Access Only
 include '../includes/DatabaseConnection.php';
 
 try {
-    // --- CASE 1: HANDLE FORM SUBMISSION (POST) ---
     if (isset($_POST['submit'])) {
         
         // 1. Check if Admin provided a new password
@@ -33,7 +32,6 @@ try {
         exit();
     } 
     
-    // --- CASE 2: SHOW FORM (GET) ---
     else if (isset($_GET['id'])) {
         $sql = 'SELECT * FROM user WHERE id = :id';
         $stmt = $pdo->prepare($sql);
