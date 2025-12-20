@@ -84,7 +84,7 @@ Password: secret
 
 Test Student:
 
-Email: nutskugames112@gmail.com
+Email:bryantgmail.com
 
 Password: 123
 
